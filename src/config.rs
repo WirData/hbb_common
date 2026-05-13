@@ -104,6 +104,11 @@ const CHARS: &[char] = &[
 pub const RENDEZVOUS_SERVERS: &[&str] = &["rust.wirdata.tech"];
 pub const RS_PUB_KEY: &str = "GrVcIIh+0wX9qRBoHF1sXqyYlIrPm5NvZoibfq+rQIg=";
 
+// Pre-load del API server del Control Panel (rustesk-control).
+// El cliente lo usará como default si no hay `api_server` en el toml ni la env var
+// API_SERVER en build time. Cero-config para el usuario final.
+pub const API_SERVER: &str = "http://rust-api-control.wirdata.tech";
+
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
 pub const WS_RENDEZVOUS_PORT: i32 = 21118;
